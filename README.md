@@ -14,6 +14,7 @@ Hope it helps you!
 
 希望对你有帮助！
 
+
 I made some changes to the code provided by the author,
 and wrote Double Cycle Link List code all by myself!
 
@@ -24,6 +25,7 @@ Welcome to correct!
 并自己写了双向循环链表的代码！
 
 欢迎批评指正！
+
 
 It needs some time to sort out, I will keep updating!
 
