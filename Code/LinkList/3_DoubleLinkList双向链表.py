@@ -1,4 +1,6 @@
 class Node(object):
+    """结点"""
+
     def __init__(self, item):
         self.elem = item
         self.next = None
@@ -6,13 +8,17 @@ class Node(object):
 
 
 class DoubleLinkList(object):
+    """双链表"""
+
     def __init__(self, node=None):
         self.__head = node
 
     def is_empty(self):
+        """链表是否为空"""
         return self.__head is None
 
     def length(self):
+        """链表长度"""
         # 定义游标
         cur = self.__head
         # 计数
@@ -24,6 +30,7 @@ class DoubleLinkList(object):
         return count
 
     def travel(self):
+        """遍历整个链表"""
         # 定义游标
         cur = self.__head
         # 遍历
@@ -33,6 +40,7 @@ class DoubleLinkList(object):
         print()
 
     def add(self, item):
+        """链表头部添加元素，头插法"""
         node = Node(item)
         node.next = self.__head
         self.__head = node
@@ -41,6 +49,7 @@ class DoubleLinkList(object):
             node.next.prev = node
 
     def append(self, item):
+        """链表尾部添加元素, 尾插法"""
         # 创建新增节点
         node = Node(item)
         if self.is_empty():
@@ -56,6 +65,10 @@ class DoubleLinkList(object):
             node.prev = cur
 
     def insert(self, pos, item):
+        """
+        指定位置添加元素
+        :param  pos 从0开始
+        """
         if pos <= 0:
             self.add(item)
         elif pos >= self.length():
@@ -78,6 +91,7 @@ class DoubleLinkList(object):
             cur.prev = node
 
     def remove(self, item):
+        """删除节点"""
         # 定义游标
         cur = self.__head
         while cur is not None:
@@ -95,6 +109,7 @@ class DoubleLinkList(object):
                 cur = cur.next
 
     def search(self, item):
+        """查找节点是否存在"""
         # 定义游标
         cur = self.__head
         # 遍历
@@ -122,15 +137,15 @@ if __name__ == "__main__":
     ll.append(5)
     ll.append(6)
     # 8 1 2 3 4 5 6
-    ll.insert(-1, 9)  # 9 8 1 23456
+    ll.insert(-1, 9)  # 9 8 1 2 3 4 5 6
     ll.travel()
-    ll.insert(3, 100)  # 9 8 1 100 2 3456
+    ll.insert(3, 100)  # 9 8 1 100 2 3 4 5 6
     ll.travel()
-    ll.insert(10, 200)  # 9 8 1 100 23456 200
+    ll.insert(10, 200)  # 9 8 1 100 2 3 4 5 6 200
     ll.travel()
     ll.remove(100)
     ll.travel()
     ll.remove(9)
     ll.travel()
     ll.remove(200)
-    ll.travel()
+    ll.travel()  # 8 1 2 3 4 5 6

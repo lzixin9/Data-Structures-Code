@@ -1,10 +1,14 @@
 class Node(object):
+    """节点"""
+
     def __init__(self, item):
         self.elem = item
         self.next = None
 
 
 class SingleCycleLinkList(object):
+    """单向循环链表"""
+
     def __init__(self, node=None):
         self.__head = node
         # 增加尾指向头
@@ -12,9 +16,11 @@ class SingleCycleLinkList(object):
             node.next = self.__head
 
     def is_empty(self):
+        """链表是否为空"""
         return self.__head is None
 
     def length(self):
+        """链表长度"""
         # 定义游标
         cur = self.__head
         # cur为None，cur.next不存在情况,即链表为空
@@ -29,6 +35,7 @@ class SingleCycleLinkList(object):
         return count
 
     def travel(self):
+        """遍历整个链表"""
         # cur为None，cur.next不存在情况,即链表为空
         if self.is_empty():
             return  # 跳出
@@ -41,6 +48,7 @@ class SingleCycleLinkList(object):
         print(cur.elem)
 
     def add(self, item):
+        """链表头部添加元素，头插法"""
         # 新建节点
         node = Node(item)
         # cur为None，cur.next不存在情况,即链表为空
@@ -62,6 +70,7 @@ class SingleCycleLinkList(object):
             cur.next = node
 
     def append(self, item):
+        """链表尾部添加元素, 尾插法"""
         # 新建节点
         node = Node(item)
         # cur为None，cur.next不存在情况,即链表为空
@@ -80,6 +89,9 @@ class SingleCycleLinkList(object):
             cur.next = node
 
     def insert(self, pos, item):
+        """指定位置添加元素
+        :param  pos 从0开始
+        """
         if pos <= 0:
             self.add(item)
         elif pos >= self.length():
@@ -100,6 +112,7 @@ class SingleCycleLinkList(object):
             pre.next = node
 
     def remove(self, item):
+        """删除节点"""
         # 创建游标
         cur = self.__head
         pre = None
@@ -137,6 +150,7 @@ class SingleCycleLinkList(object):
                 pre.next = cur.next
 
     def search(self, item):
+        """查找节点是否存在"""
         if self.is_empty():
             return False
         # 创建游标
@@ -169,15 +183,15 @@ if __name__ == "__main__":
     ll.append(5)
     ll.append(6)
     # 8 1 2 3 4 5 6
-    ll.insert(-1, 9)  # 9 8 1 23456
+    ll.insert(-1, 9)  # 9 8 1 2 3 4 5 6
     ll.travel()
-    ll.insert(3, 100)  # 9 8 1 100 2 3456
+    ll.insert(3, 100)  # 9 8 1 100 2 3 4 5 6
     ll.travel()
-    ll.insert(10, 200)  # 9 8 1 100 23456 200
+    ll.insert(10, 200)  # 9 8 1 100 2 3 4 5 6 200
     ll.travel()
     ll.remove(100)
     ll.travel()
     ll.remove(9)
     ll.travel()
     ll.remove(200)
-    ll.travel()
+    ll.travel()  # 8 1 2 3 4 5 6
