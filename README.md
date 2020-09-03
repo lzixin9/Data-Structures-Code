@@ -9,8 +9,6 @@
 * I will organize it into a list and put it below and keep updating. <br>
 * It needs some time to sort out these codes, I will keep updating! <br>
 * Your support will be my motivation！Welcome to correct my mistakes！<br>
-<br>
-`Special thanks: Dr.Song` <br>
 
 ## Contents
 * code
@@ -40,7 +38,8 @@
       * class: Double Cycle Link List
   * Sort `(to be continued)`
 
-  
+## Acknowledgment
+`Song zihan(Ocean University of China，OUC)`
 
 
 
@@ -87,3 +86,6 @@
       * class: Single Cycle Link List 单向循环链表双向队列
       * class: Double Link List 双向链表双向队列
       * class: Double Cycle Link List 双向循环链表双向队列
+      
+## 致谢
+宋子涵（中国海洋大学）
