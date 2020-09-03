@@ -12,7 +12,9 @@
 
 ==========================================================================
 <br>
+
 ## Contents
+
 * code
   * LinkList
     * SingleLinkList.py
@@ -39,10 +41,11 @@
       * class: Double Link List
       * class: Double Cycle Link List
   * Sort `(to be continued)`
+  
 <br>  
-
 ==========================================================================
 <br>
+
 ## Acknowledgment
 `Song zihan(Ocean University of China，OUC)`
 
@@ -64,7 +67,9 @@
 * 你的支持是我努力的动力！欢迎批评指正！<br>
 ==========================================================================
 <br>
+
 ## 目录
+
 * code 代码
   * LinkList 链表
     * SingleLinkList.py 单链表
@@ -90,6 +95,7 @@
       * class: Single Cycle Link List 单向循环链表双向队列
       * class: Double Link List 双向链表双向队列
       * class: Double Cycle Link List 双向循环链表双向队列
+      
 <br>  
 ==========================================================================
 <br> 
