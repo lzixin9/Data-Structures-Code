@@ -10,7 +10,7 @@
 * It needs some time to sort out these codes, I will keep updating! <br>
 * Your support will be my motivation！Welcome to correct my mistakes！<br>
 <br>
-`Special thanks: Dr.Song`<br>
+`Special thanks: Dr.Song` <br>
 
 ## Contents
 * code
@@ -59,7 +59,7 @@
 * 需要时间整理这些代码，我会持续更新；<br>
 * 你的支持是我努力的动力！欢迎批评指正！<br>
 <br>
-特别鸣谢：宋子涵（中国海洋大学）
+`特别鸣谢：宋子涵（中国海洋大学）`
 <br>
 ## 目录
 * code 代码
