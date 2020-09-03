@@ -1,13 +1,14 @@
 class Node(object):
-    """节点"""
+    """结点"""
 
-    def __init__(self, elem):
-        self.elem = elem
+    def __init__(self, item):
+        self.elem = item
         self.next = None
+        self.prev = None
 
 
-class SingleLinkList(object):
-    """单链表"""
+class DoubleLinkList(object):
+    """双链表"""
 
     def __init__(self, node=None):
         self.__head = node
@@ -18,10 +19,11 @@ class SingleLinkList(object):
 
     def length(self):
         """链表长度"""
-        # 游标
+        # 定义游标
         cur = self.__head
         # 计数
         count = 0
+        # 遍历
         while cur is not None:
             count += 1
             cur = cur.next
@@ -29,50 +31,88 @@ class SingleLinkList(object):
 
     def travel(self):
         """遍历整个链表"""
+        # 定义游标
         cur = self.__head
+        # 遍历
         while cur is not None:
             print(cur.elem, end=" ")
             cur = cur.next
         print()
-
-    def append(self, item):
-        """链表尾部添加元素, 尾插法"""
-        node = Node(item)
-        if self.is_empty():
-            self.__head = node
-        else:
-            cur = self.__head
-            while cur.next is not None:  # 记住这里是cur.next != None而不是cur != None
-                cur = cur.next
-            cur.next = node
 
     def add(self, item):
         """链表头部添加元素，头插法"""
         node = Node(item)
         node.next = self.__head
         self.__head = node
+        if node.next:
+            # 判断是否为尾节点
+            node.next.prev = node
+
+    def append(self, item):
+        """链表尾部添加元素, 尾插法"""
+        # 创建新增节点
+        node = Node(item)
+        if self.is_empty():
+            self.__head = node
+        else:
+            # 定义一个游标
+            cur = self.__head
+            # 遍历
+            while cur.next is not None:  # 记住这里是cur.next != None而不是cur != None
+                cur = cur.next
+            # 尾插
+            cur.next = node
+            node.prev = cur
 
     def insert(self, pos, item):
-        """指定位置添加元素
+        """
+        指定位置添加元素
         :param  pos 从0开始
         """
-        pre = self.__head  # 注意这里用的是pre！所以while判断语句count是与pos-1比较！若是cur则应该是与pos比较
         if pos <= 0:
             self.add(item)
-        elif pos > self.length() - 1:
+        elif pos >= self.length():
             self.append(item)
         else:
+            # 计数
             count = 0
-            while count < pos - 1:
-                count += 1
-                pre = pre.next
+            # 定义游标
+            cur = self.__head
+            # 创建新增节点
             node = Node(item)
-            node.next = pre.next
-            pre.next = node
+            # 遍历
+            while count < pos:  # 这里第一次写出错了，牢记pos与pos-1的区别， pos-1相当于pre替换cur
+                count += 1
+                cur = cur.next
+            # 插入节点
+            node.next = cur
+            node.prev = cur.prev
+            cur.prev.next = node
+            cur.prev = node
+
+    def remove(self, item):
+        """删除节点"""
+        # 定义游标
+        cur = self.__head
+        while cur is not None:
+            if cur.elem == item:
+                if cur == self.__head:
+                    self.__head = cur.next
+                    if cur.next:
+                        cur.next.prev = None
+                else:
+                    cur.prev.next = cur.next
+                    if cur.next:
+                        cur.next.prev = cur.prev
+                break  # break不要忘记，这是仅删除遍历到的第一个元素
+            else:
+                cur = cur.next
 
     def search(self, item):
         """查找节点是否存在"""
+        # 定义游标
         cur = self.__head
+        # 遍历
         while cur is not None:
             if cur.elem == item:
                 return True
@@ -80,24 +120,12 @@ class SingleLinkList(object):
                 cur = cur.next
         return False
 
-    def remove(self, item):
-        """删除节点"""
-        pre = None
-        cur = self.__head
-        while cur is not None:
-            if cur.elem == item:
-                if cur == self.__head:
-                    self.__head = cur.next
-                else:
-                    pre.next = cur.next
-                break
-            else:
-                pre = cur
-                cur = cur.next
+    def head(self):  # 通过这层包装，继承的子类通过访问此方法来访问私有属性
+        return self.__head
 
 
 if __name__ == "__main__":
-    ll = SingleLinkList()
+    ll = DoubleLinkList()
     print(ll.is_empty())
     print(ll.length())
 

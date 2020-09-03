@@ -144,7 +144,7 @@ class DoubleCycleLinkList(object):
                 cur = cur.next
         # 循环结束，cur指向尾节点
         if cur.elem == item:
-            if cur.next is not None:
+            if cur.prev is not None:
                 cur.prev.next = self.__head
             else:
                 self.__head = None
@@ -165,6 +165,9 @@ class DoubleCycleLinkList(object):
         if cur.elem == item:
             return True
         return False
+
+    def head(self):  # 通过这层包装，继承的子类通过访问此方法来访问私有属性
+        return self.__head
 
 
 if __name__ == "__main__":

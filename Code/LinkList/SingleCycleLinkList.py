@@ -166,6 +166,9 @@ class SingleCycleLinkList(object):
             return True
         return False
 
+    def head(self):  # 通过这层包装，继承的子类通过访问此方法来访问私有属性
+        return self.__head
+
 
 if __name__ == "__main__":
     ll = SingleCycleLinkList()
@@ -195,3 +198,4 @@ if __name__ == "__main__":
     ll.travel()
     ll.remove(200)
     ll.travel()  # 8 1 2 3 4 5 6
+    print(ll.head())
