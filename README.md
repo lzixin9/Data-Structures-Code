@@ -1,5 +1,5 @@
 # Data-structure-learning-code
-==============================
+=
 
 ## Preface
 * All codes are written through learning [Bilibili](https://www.bilibili.com/video/av21540971? "https://www.bilibili.com/video/av21540971?") video site in China. <br>
@@ -15,7 +15,7 @@
 
 <br> <br> <br>
 # 数据结构学习代码
-==============================
+=
 
 ## 前言
 * 所有代码通过学习[哔哩哔哩](https://www.bilibili.com/video/av21540971? "https://www.bilibili.com/video/av21540971?")所写；<br>
