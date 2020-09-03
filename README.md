@@ -9,6 +9,7 @@
 * I will organize it into a list and put it below and keep updating. <br>
 * It needs some time to sort out these codes, I will keep updating! <br>
 * Your support will be my motivation！Welcome to correct my mistakes！<br>
+
 ==========================================================================
 <br>
 ## Contents
@@ -39,6 +40,7 @@
       * class: Double Cycle Link List
   * Sort `(to be continued)`
 <br>  
+
 ==========================================================================
 <br>
 ## Acknowledgment
