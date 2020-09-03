@@ -3,7 +3,7 @@
 
 ## Preface
 * All codes are written through learning  [Bilibili](https://www.bilibili.com/video/av21540971?p=5)  video site in China <br>
-* Code files contain a lot of related codes that the author did not involve,  I will organize it into a list and keep updating it later <br>
+* Code files contain a lot of related codes that the author did not involve(For example, `DoubleCycleLinkList`),  I will organize it into a list and keep updating it later <br>
 * Part of the codes are written refers to the author's codes and there are more detailed notes in Chinese and English <br>
 * It needs some time to sort out, I will keep updating! <br>
 
@@ -11,13 +11,13 @@
 
 
 
-
+<br> <br> <br>
 # 数据结构学习代码
 ==============================
 
 ## 前言
 * 所有代码通过学习[哔哩哔哩](https://www.bilibili.com/video/av21540971?p=5)所写
-* 
+* 代码文件夹包含很多相关但作者没涉及到的代码（例如双向循环链表等）
 并自己写了双向循环链表的代码！
 
 欢迎批评指正！
