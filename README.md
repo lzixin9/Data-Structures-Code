@@ -15,7 +15,7 @@
 
 ## Contents
 
-* code
+* Code
   * `LinkList`
     * SingleLinkList.py
     * SingleCycleLinkList.py
