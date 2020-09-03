@@ -42,12 +42,12 @@
       * class: Double Cycle Link List
   * Sort `(to be continued)`
   
-<br>  
+ 
 ==========================================================================
 <br>
 
 ## Acknowledgment
-`Song zihan(Ocean University of China，OUC)`
+`Song Zihan(Ocean University of China，OUC)`
 
 
 
@@ -96,7 +96,6 @@
       * class: Double Link List 双向链表双向队列
       * class: Double Cycle Link List 双向循环链表双向队列
       
-<br>  
 ==========================================================================
 <br> 
 
@@ -104,6 +103,6 @@
 
 `宋子涵（中国海洋大学）`
 
-<br>  
+ 
 ==========================================================================
 <br>
