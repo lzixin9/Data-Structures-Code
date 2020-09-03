@@ -2,7 +2,7 @@
 
 
 ## Preface
-* All codes are written through learning [Bilibili](https://www.bilibili.com/video/av21540971? "https://www.bilibili.com/video/av21540971?") data structure video site in China. <br>
+* All codes are written based on courses of data structure on [Bilibili](https://www.bilibili.com/video/av21540971? "https://www.bilibili.com/video/av21540971?") video platform. （Thanks Dr.Song）<br>
 * Code files contain a lot of related codes that the author did not involve(For example, `DoubleCycleLinkList`) <br>
 * All codes are verified, and the verification code is attached to the end of the file. <br>
 * Part of the codes are written refers to the author's codes and there are more detailed notes in Chinese and English. <br>
@@ -36,8 +36,8 @@
       * class: Single Cycle Link List
       * class: Double Link List
       * class: Double Cycle Link List
-  * Sort
-   * `To be `
+  * Sort `(to be continued)`
+   * 
   
 
 
@@ -64,10 +64,22 @@
     * SingleCycleLinkList.py 单向循环链表
     * DoubleLinkList.py 双向链表
     * DoubleCycleLinkList.py 双向循环链表
-  * Stack&Queue
-    * Stack.py
-      * class ListStack
-      * class SingleLinkListStack
-    * Queue.py
-    * Dequeue.py
-
+  * Stack&Queue 栈和队列
+    * Stack.py 栈
+      * class: List 列表栈
+      * class: Single Link List
+      * class: Single Cycle Link List
+      * class: Double Link List
+      * class: Double Cycle Link List
+    * Queue.py 队列
+      * class: List
+      * class: Single Link List
+      * class: Single Cycle Link List
+      * class: Double Link List
+      * class: Double Cycle Link List
+    * Dequeue.py 双向队列
+      * class: List
+      * class: Single Link List
+      * class: Single Cycle Link List
+      * class: Double Link List
+      * class: Double Cycle Link List
