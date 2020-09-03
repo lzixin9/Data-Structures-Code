@@ -16,12 +16,12 @@
 ## Contents
 
 * Code
-  * `LinkList`
+  * LinkList
     * SingleLinkList.py
     * SingleCycleLinkList.py
     * DoubleLinkList.py
     * DoubleCycleLinkList.py
-  * `Stack&Queue`
+  * Stack&Queue
     * Stack.py
       * class: List
       * class: Single Link List
@@ -40,7 +40,7 @@
       * class: Single Cycle Link List
       * class: Double Link List
       * class: Double Cycle Link List
-  * `Sort`   `(to be continued)`
+  * Sort   `(to be continued)`
   
  
 
@@ -73,12 +73,12 @@
 ## 目录
 
 * code 代码
-  * `LinkList 链表`
+  * LinkList 链表
     * SingleLinkList.py 单链表
     * SingleCycleLinkList.py 单向循环链表
     * DoubleLinkList.py 双向链表
     * DoubleCycleLinkList.py 双向循环链表
-  * `Stack&Queue 栈和队列`
+  * Stack&Queue 栈和队列
     * Stack.py 栈
       * class: List 列表栈
       * class: Single Link List 单链表栈
@@ -97,6 +97,7 @@
       * class: Single Cycle Link List 单向循环链表双向队列
       * class: Double Link List 双向链表双向队列
       * class: Double Cycle Link List 双向循环链表双向队列
+  * Sort 排序 `（待更新）`
       
 
 <br> 
