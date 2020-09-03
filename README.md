@@ -2,13 +2,11 @@
 ==============================
 
 ## Preface 前言
-    All codes are written through learning `Bilibili` video site in China and refer to the author's code,
-    the URL is as follows:
-    `https://www.bilibili.com/video/av21540971?p=5`
-    Hope it helps you!
+    All codes are written through learning  `[Bilibili](https://www.bilibili.com/video/av21540971?p=5)`  video site in China and refer to the author's code,
+
     
     通过`哔哩哔哩`视频学习并参考作者的代码所写，网址如下：
-    `https://www.bilibili.com/video/av21540971?p=5`
+     `https://www.bilibili.com/video/av21540971?p=5`
     希望对你有帮助！
 
 
