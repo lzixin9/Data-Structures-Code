@@ -10,7 +10,7 @@
 * It needs some time to sort out these codes, I will keep updating! <br>
 * Your support will be my motivation！Welcome to correct my mistakes！<br>
 
-## contents
+## Contents
 * code
   * LinkList
     * SingleLinkList.py
@@ -31,6 +31,13 @@
       * class: Double Link List
       * class: Double Cycle Link List
     * Dequeue.py
+      * class: List
+      * class: Single Link List
+      * class: Single Cycle Link List
+      * class: Double Link List
+      * class: Double Cycle Link List
+  * Sort
+   * `To be `
   
 
 
