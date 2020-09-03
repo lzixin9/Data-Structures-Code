@@ -3,7 +3,7 @@
 
 ## Preface
 * All codes were written based on courses of data structure on [Bilibili](https://www.bilibili.com/video/av21540971? "https://www.bilibili.com/video/av21540971?") video platform. <br>
-* Code files contain a lot of related codes that the author did not involve(For example, `DoubleCycleLinkList`) <br>
+* Code folders contain a lot of related codes that the author did not involve(For example, `DoubleCycleLinkList`) <br>
 * All codes are verified, and the verification codes were attached to the end of the py file. <br>
 * Part of the codes refers to the author's codes and there are more detailed notes in Chinese and English. <br>
 * I will organize it into a list and put it below and keep updating. <br>
