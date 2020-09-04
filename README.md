@@ -1,4 +1,4 @@
-# Data-Structure-Code
+# Data-Structures-Code
 
 
 ## Preface
