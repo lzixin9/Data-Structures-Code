@@ -42,7 +42,7 @@
       * class: Double Cycle Link List
   * Sort   `(to be continued)`
   
- 
+<br>
 
 <br>
 
@@ -72,13 +72,13 @@
 
 ## 目录
 
-* code 代码
-  * LinkList 链表
+* Code 代码（文件夹）
+  * LinkList 链表（文件夹）
     * SingleLinkList.py 单链表
     * SingleCycleLinkList.py 单向循环链表
     * DoubleLinkList.py 双向链表
     * DoubleCycleLinkList.py 双向循环链表
-  * Stack&Queue 栈和队列
+  * Stack&Queue 栈和队列（文件夹） 
     * Stack.py 栈
       * class: List 列表栈
       * class: Single Link List 单链表栈
@@ -97,7 +97,7 @@
       * class: Single Cycle Link List 单向循环链表双向队列
       * class: Double Link List 双向链表双向队列
       * class: Double Cycle Link List 双向循环链表双向队列
-  * Sort 排序 `（待更新）`
+  * Sort 排序 （文件夹）`（待更新）`
       
 
 <br> 
