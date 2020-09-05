@@ -163,6 +163,7 @@ class SingleLinkList(object):
                 if self.is_empty():
                     # 链表为空
                     self.__head = node
+                    cur = node
                 else:
                     # 链表不为空
                     # 遍历到尾节点

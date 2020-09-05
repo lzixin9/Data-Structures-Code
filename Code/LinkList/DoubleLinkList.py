@@ -202,6 +202,7 @@ class DoubleLinkList(object):
                 node = Node(it)
                 if self.is_empty():
                     self.__head = node
+                    cur = node
                 else:
                     # 遍历
                     """第一次循环遍历到尾节点之后，循环将从尾节点cur开始，减少了for循环遍历所用时间"""

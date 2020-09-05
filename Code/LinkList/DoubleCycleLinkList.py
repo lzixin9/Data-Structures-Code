@@ -268,6 +268,7 @@ class DoubleCycleLinkList(object):
                 if self.is_empty():
                     self.__head = node
                     node.next = node
+                    cur = node  # 游标指向node
                 else:
                     """当第一次找到尾节点后，循环都从尾节点cur开始"""
                     while cur.next != self.__head:
