@@ -1,11 +1,16 @@
+# coding:utf-8
 import Data_Structure.LinkList.SingleLinkList as SLL
 import Data_Structure.LinkList.SingleCycleLinkList as SCL
 import Data_Structure.LinkList.DoubleLinkList as DLL
 import Data_Structure.LinkList.DoubleCycleLinkList as DCL
 
 
-# you need change the "01_SingleLinkList单链表.py"..."04_..." to "SingleLinkList.py"... first
-# The above code can be modified and imported according to the location of the link list py file
+# You need to download:
+# /code/LinkList/SingleLinkList.py
+# /code/LinkList/SingleCycleLinkList.py
+# /code/LinkList/DoubleLinkList.py
+# /code/LinkList/DoubleCycleLinkList.py
+# and import LinkList classes in them
 
 
 class ListDeque(object):
@@ -288,6 +293,7 @@ class DoubleCycleLinkListDeque(DCL.DoubleCycleLinkList):
 
 
 if __name__ == "__main__":
+    # ========= test =========
     s = DoubleCycleLinkListDeque()
     print(s.is_empty())  # True
     s.add_front(1)
@@ -306,3 +312,17 @@ if __name__ == "__main__":
     print(s.pop_rear())  # 3
     print(s.is_empty())  # True
     print("size:", s.size())  # 0
+    # ====== Result ===== #
+    #                     #
+    # True                #
+    # False               #
+    # size: 6             #
+    # 5                   #
+    # 2                   #
+    # 6                   #
+    # 4                   #
+    # 1                   #
+    # 3                   #
+    # True                #
+    # size: 0             #
+    # =================== #
