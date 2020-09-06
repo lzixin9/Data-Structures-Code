@@ -17,31 +17,32 @@
 ## Contents
 
 * Code
-  * LinkList
-    * SingleLinkList.py
-    * SingleCycleLinkList.py
-    * DoubleLinkList.py
-    * DoubleCycleLinkList.py
-  * Stack&Queue
-    * Stack.py
-      * class: List
-      * class: Single Link List
-      * class: Single Cycle Link List
-      * class: Double Link List
-      * class: Double Cycle Link List
-    * Queue.py
-      * class: List
-      * class: Single Link List
-      * class: Single Cycle Link List
-      * class: Double Link List
-      * class: Double Cycle Link List
-    * Dequeue.py
-      * class: List
-      * class: Single Link List
-      * class: Single Cycle Link List
-      * class: Double Link List
-      * class: Double Cycle Link List
-  * Sort   `(to be continued)`
+ * LinkList
+  * SingleLinkList.py
+  * SingleCycleLinkList.py
+  * DoubleLinkList.py
+  * DoubleCycleLinkList.py
+ * Stack&Queue
+  * Stack.py
+   * class: List
+   * class: Single Link List
+   * class: Single Cycle Link List
+   * class: Double Link List
+   * class: Double Cycle Link List
+  * Queue.py
+   * class: List
+   * class: Single Link List
+   * class: Single Cycle Link List
+   * class: Double Link List
+   * class: Double Cycle Link List
+  * Dequeue.py
+   * class: List
+   * class: Single Link List
+   * class: Single Cycle Link List
+   * class: Double Link List
+   * class: Double Cycle Link List
+ * Sort
+  * Bubble
   
 <br>
 
@@ -99,7 +100,8 @@
       * class: Single Cycle Link List 单向循环链表双向队列
       * class: Double Link List 双向链表双向队列
       * class: Double Cycle Link List 双向循环链表双向队列
-  * Sort 排序 （文件夹）`（待更新）`
+  * Sort
+    *
       
 
 <br> 
