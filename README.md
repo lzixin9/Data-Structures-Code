@@ -24,25 +24,25 @@
     * DoubleCycleLinkList.py
   * Stack&Queue
     * Stack.py
-    * class: List
-    * class: Single Link List
-    * class: Single Cycle Link List
-    * class: Double Link List
-    * class: Double Cycle Link List
-  * Queue.py
-    * class: List
-    * class: Single Link List
-    * class: Single Cycle Link List
-    * class: Double Link List
-    * class: Double Cycle Link List
-  * Dequeue.py
-    * class: List
-    * class: Single Link List
-    * class: Single Cycle Link List
-    * class: Double Link List
-    * class: Double Cycle Link List
- * Sort
-   * Bubble
+      * class: List
+      * class: Single Link List
+      * class: Single Cycle Link List
+      * class: Double Link List
+      * class: Double Cycle Link List
+    * Queue.py
+      * class: List
+      * class: Single Link List
+      * class: Single Cycle Link List
+      * class: Double Link List
+      * class: Double Cycle Link List
+    * Dequeue.py
+      * class: List
+      * class: Single Link List
+      * class: Single Cycle Link List
+      * class: Double Link List
+      * class: Double Cycle Link List
+  * Sort
+    * Bubble.py
   
 <br>
 
@@ -101,7 +101,7 @@
       * class: Double Link List 双向链表双向队列
       * class: Double Cycle Link List 双向循环链表双向队列
   * Sort
-    *
+    * Bubble.py 冒泡排序
       
 
 <br> 
