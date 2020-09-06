@@ -84,7 +84,8 @@ class BubbleSort(object):
                 return
 
     def bubble_dll(self, dll: DLL.DoubleLinkList()):
-        # 几乎和单链表思路代码一样
+        """双链表冒泡排序"""
+        # 思路代码几乎和单链表一样
         n = dll.length()
         if dll.is_empty() or dll.length() == 1:
             # 若输入链表为空或长度为1，无需排序
@@ -106,7 +107,8 @@ class BubbleSort(object):
                 return
 
     def bubble_dcll(self, dcll: DCL.DoubleCycleLinkList()):
-        """单向循环链表冒泡排序"""
+        """双向循环链表冒泡排序"""
+        # 思路代码几乎和双链表循环一样
         n = dcll.length()
         if dcll.is_empty() or dcll.length() == 1:
             # 若输入链表为空或长度为1，无需排序
