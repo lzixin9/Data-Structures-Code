@@ -1,4 +1,5 @@
 # coding:utf-8
+
 import Data_Structure.LinkList.SingleLinkList as SLL
 import Data_Structure.LinkList.SingleCycleLinkList as SCL
 import Data_Structure.LinkList.DoubleLinkList as DLL
@@ -275,8 +276,9 @@ class DoubleCycleLinkListDeque(DCL.DoubleCycleLinkList):
             while cur.next != self.head():
                 cur = cur.next
             # 退出循环，cur指向尾节点 Exit the loop, "cur" points to the tail node
-            if cur.prev is not None:
+            if self.length() != 1:
                 cur.prev.next = self.head()
+                self.head().prev = cur
             else:
                 self.remove(cur.elem)
             return cur.elem
@@ -294,6 +296,70 @@ class DoubleCycleLinkListDeque(DCL.DoubleCycleLinkList):
 
 if __name__ == "__main__":
     # ========= test =========
+    print("SingleLinkListDeque:")
+    s = SingleLinkListDeque()
+    print(s.is_empty())  # True
+    s.add_front(1)
+    s.add_front(2)  # 2 1
+    s.add_rear(3)
+    s.add_rear(4)  # 2 1 3 4
+    s.add_front(5)
+    s.add_rear(6)  # 5 2 1 3 4 6
+    print(s.is_empty())  # False
+    print("size:", s.size())  # 6
+    print(s.pop_front())  # 5
+    print(s.pop_front())  # 2
+    print(s.pop_rear())  # 6
+    print(s.pop_rear())  # 4
+    print(s.pop_front())  # 1
+    print(s.pop_rear())  # 3
+    print(s.is_empty())  # True
+    print("size:", s.size())  # 0
+    print()
+
+    print("SingleCycleLinkListDeque:")
+    s = SingleCycleLinkListDeque()
+    print(s.is_empty())  # True
+    s.add_front(1)
+    s.add_front(2)  # 2 1
+    s.add_rear(3)
+    s.add_rear(4)  # 2 1 3 4
+    s.add_front(5)
+    s.add_rear(6)  # 5 2 1 3 4 6
+    print(s.is_empty())  # False
+    print("size:", s.size())  # 6
+    print(s.pop_front())  # 5
+    print(s.pop_front())  # 2
+    print(s.pop_rear())  # 6
+    print(s.pop_rear())  # 4
+    print(s.pop_front())  # 1
+    print(s.pop_rear())  # 3
+    print(s.is_empty())  # True
+    print("size:", s.size())  # 0
+    print()
+
+    print("DoubleLinkListDeque:")
+    s = DoubleLinkListDeque()
+    print(s.is_empty())  # True
+    s.add_front(1)
+    s.add_front(2)  # 2 1
+    s.add_rear(3)
+    s.add_rear(4)  # 2 1 3 4
+    s.add_front(5)
+    s.add_rear(6)  # 5 2 1 3 4 6
+    print(s.is_empty())  # False
+    print("size:", s.size())  # 6
+    print(s.pop_front())  # 5
+    print(s.pop_front())  # 2
+    print(s.pop_rear())  # 6
+    print(s.pop_rear())  # 4
+    print(s.pop_front())  # 1
+    print(s.pop_rear())  # 3
+    print(s.is_empty())  # True
+    print("size:", s.size())  # 0
+    print()
+
+    print("DoubleCycleLinkListDeque:")
     s = DoubleCycleLinkListDeque()
     print(s.is_empty())  # True
     s.add_front(1)
@@ -312,17 +378,59 @@ if __name__ == "__main__":
     print(s.pop_rear())  # 3
     print(s.is_empty())  # True
     print("size:", s.size())  # 0
-    # ====== Result ===== #
-    #                     #
-    # True                #
-    # False               #
-    # size: 6             #
-    # 5                   #
-    # 2                   #
-    # 6                   #
-    # 4                   #
-    # 1                   #
-    # 3                   #
-    # True                #
-    # size: 0             #
-    # =================== #
+    print()
+
+    # ========= Result ======== #
+    # SingleLinkListDeque:      #
+    # True                      #
+    # False                     #
+    # size: 6                   #
+    # 5                         #
+    # 2                         #
+    # 6                         #
+    # 4                         #
+    # 1                         #
+    # 3                         #
+    # True                      #
+    # size: 0                   #
+    #                           #
+    # SingleCycleLinkListDeque: #
+    # True                      #
+    # False                     #
+    # size: 6                   #
+    # 5                         #
+    # 2                         #
+    # 6                         #
+    # 4                         #
+    # 1                         #
+    # 3                         #
+    # True                      #
+    # size: 0                   #
+    #                           #
+    # DoubleLinkListDeque:      #
+    # True                      #
+    # False                     #
+    # size: 6                   #
+    # 5                         #
+    # 2                         #
+    # 6                         #
+    # 4                         #
+    # 1                         #
+    # 3                         #
+    # True                      #
+    # size: 0                   #
+    #                           #
+    # DoubleCycleLinkListDeque: #
+    # True                      #
+    # False                     #
+    # size: 6                   #
+    # 5                         #
+    # 2                         #
+    # 6                         #
+    # 4                         #
+    # 1                         #
+    # 3                         #
+    # True                      #
+    # size: 0                   #
+    #                           #
+    # ========================= #

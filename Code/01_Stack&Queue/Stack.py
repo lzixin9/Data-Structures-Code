@@ -1,4 +1,6 @@
 # coding:utf-8
+
+import Data_Structure.LinkList.SingleLinkList as SLL
 import Data_Structure.LinkList.SingleCycleLinkList as SCL
 import Data_Structure.LinkList.DoubleLinkList as DLL
 import Data_Structure.LinkList.DoubleCycleLinkList as DCL
@@ -219,8 +221,9 @@ class DoubleCycleLinkListStack(DCL.DoubleCycleLinkList):
             while cur.next != self.head():
                 cur = cur.next
             # 退出循环，cur指向尾节点 Exit the loop, "cur" points to the tail node
-            if cur.prev is not None:
+            if self.length() != 1:
                 cur.prev.next = self.head()
+                self.head().prev = cur.prev
             else:
                 self.remove(cur.elem)
             return cur.elem
@@ -228,7 +231,8 @@ class DoubleCycleLinkListStack(DCL.DoubleCycleLinkList):
 
 if __name__ == "__main__":
     # ========= test =========
-    s = SingleLinkListStack()
+    s = SingleLinkListStack()  # change the class
+    print("SingleLinkListStack:")
     print(s.is_empty())  # True
     s.push(1)
     s.push(2)
@@ -246,18 +250,122 @@ if __name__ == "__main__":
     print(s.pop())
     print(s.is_empty())  # True
     print("size:", s.size())  # 0
+    print()
 
-    # ====== Result ===== #
-    #                     #
-    # True                #
-    # False               #
-    # size: 6             #
-    # 5                   #
-    # 2                   #
-    # 6                   #
-    # 4                   #
-    # 1                   #
-    # 3                   #
-    # True                #
-    # size: 0             #
-    # =================== #
+    s = SingleCycleLinkListStack()  # change the class
+    print("SingleCycleLinkListStack:")
+    print(s.is_empty())  # True
+    s.push(1)
+    s.push(2)
+    s.push(3)
+    s.push(4)
+    s.push(5)
+    s.push(6)  # 1 2 3 4 5 6
+    print(s.is_empty())  # False
+    print("size:", s.size())  # 6
+    print(s.pop())
+    print(s.pop())
+    print(s.pop())
+    print(s.pop())
+    print(s.pop())
+    print(s.pop())
+    print(s.is_empty())  # True
+    print("size:", s.size())  # 0
+    print()
+
+    s = DoubleLinkListStack()  # change the class
+    print("DoubleLinkListStack:")
+    print(s.is_empty())  # True
+    s.push(1)
+    s.push(2)
+    s.push(3)
+    s.push(4)
+    s.push(5)
+    s.push(6)  # 1 2 3 4 5 6
+    print(s.is_empty())  # False
+    print("size:", s.size())  # 6
+    print(s.pop())
+    print(s.pop())
+    print(s.pop())
+    print(s.pop())
+    print(s.pop())
+    print(s.pop())
+    print(s.is_empty())  # True
+    print("size:", s.size())  # 0
+    print()
+
+    s = DoubleCycleLinkListStack()  # change the class
+    print("DoubleCycleLinkListStack:")
+    print(s.is_empty())  # True
+    s.push(1)
+    s.push(2)
+    s.push(3)
+    s.push(4)
+    s.push(5)
+    s.push(6)  # 1 2 3 4 5 6
+    print(s.is_empty())  # False
+    print("size:", s.size())  # 6
+    print(s.pop())
+    print(s.pop())
+    print(s.pop())
+    print(s.pop())
+    print(s.pop())
+    print(s.pop())
+    print(s.is_empty())  # True
+    print("size:", s.size())  # 0
+    print()
+
+    # ========= Result ======== #
+    # SingleLinkListStack:      #
+    # True                      #
+    # False                     #
+    # size: 6                   #
+    # 5                         #
+    # 2                         #
+    # 6                         #
+    # 4                         #
+    # 1                         #
+    # 3                         #
+    # True                      #
+    # size: 0                   #
+    #                           #
+    # SingleCycleLinkListStack: #
+    # True                      #
+    # False                     #
+    # size: 6                   #
+    # 5                         #
+    # 2                         #
+    # 6                         #
+    # 4                         #
+    # 1                         #
+    # 3                         #
+    # True                      #
+    # size: 0                   #
+    #                           #
+    # DoubleLinkListStack:      #
+    # True                      #
+    # False                     #
+    # size: 6                   #
+    # 5                         #
+    # 2                         #
+    # 6                         #
+    # 4                         #
+    # 1                         #
+    # 3                         #
+    # True                      #
+    # size: 0                   #
+    #                           #
+    # DoubleCycleLinkListStack: #
+    # True                      #
+    # False                     #
+    # size: 6                   #
+    # 5                         #
+    # 2                         #
+    # 6                         #
+    # 4                         #
+    # 1                         #
+    # 3                         #
+    # True                      #
+    # size: 0                   #
+    #                           #
+    # ========================= #

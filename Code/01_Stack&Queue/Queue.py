@@ -12,7 +12,7 @@ import Data_Structure.LinkList.DoubleCycleLinkList as DCL
 # /code/LinkList/DoubleCycleLinkList.py
 # and import LinkList classes in them
 
-class Queue(object):
+class ListQueue(object):
     """队列 Queue"""
 
     def __init__(self):
@@ -177,7 +177,8 @@ class DoubleCycleLinkListQueue(DCL.DoubleCycleLinkList):
 
 if __name__ == "__main__":
     # ========= test =========
-    s = DoubleLinkListQueue()
+    s = SingleLinkListQueue()
+    print("SingleLinkListQueue:")
     print(s.is_empty())  # True
     s.enqueue(1)
     s.enqueue(2)
@@ -187,26 +188,130 @@ if __name__ == "__main__":
     s.enqueue(6)  # 1 2 3 4 5 6
     print(s.is_empty())  # False
     print("size:", s.size())  # 6
-    print(s.dequeue())
-    print(s.dequeue())
-    print(s.dequeue())
-    print(s.dequeue())
-    print(s.dequeue())
-    print(s.dequeue())
+    print(s.dequeue())  # 1
+    print(s.dequeue())  # 2
+    print(s.dequeue())  # 3
+    print(s.dequeue())  # 4
+    print(s.dequeue())  # 5
+    print(s.dequeue())  # 6
     print(s.is_empty())  # True
     print("size:", s.size())  # 0
+    print()
 
-    # ====== Result ===== #
-    #                     #
-    # True                #
-    # False               #
-    # size: 6             #
-    # 5                   #
-    # 2                   #
-    # 6                   #
-    # 4                   #
-    # 1                   #
-    # 3                   #
-    # True                #
-    # size: 0             #
-    # =================== #
+    s = SingleCycleLinkListQueue()
+    print("SingleCycleLinkListQueue:")
+    print(s.is_empty())  # True
+    s.enqueue(1)
+    s.enqueue(2)
+    s.enqueue(3)
+    s.enqueue(4)
+    s.enqueue(5)
+    s.enqueue(6)  # 1 2 3 4 5 6
+    print(s.is_empty())  # False
+    print("size:", s.size())  # 6
+    print(s.dequeue())  # 1
+    print(s.dequeue())  # 2
+    print(s.dequeue())  # 3
+    print(s.dequeue())  # 4
+    print(s.dequeue())  # 5
+    print(s.dequeue())  # 6
+    print(s.is_empty())  # True
+    print("size:", s.size())  # 0
+    print()
+
+    s = DoubleLinkListQueue()
+    print("DoubleLinkListQueue:")
+    print(s.is_empty())  # True
+    s.enqueue(1)
+    s.enqueue(2)
+    s.enqueue(3)
+    s.enqueue(4)
+    s.enqueue(5)
+    s.enqueue(6)  # 1 2 3 4 5 6
+    print(s.is_empty())  # False
+    print("size:", s.size())  # 6
+    print(s.dequeue())  # 1
+    print(s.dequeue())  # 2
+    print(s.dequeue())  # 3
+    print(s.dequeue())  # 4
+    print(s.dequeue())  # 5
+    print(s.dequeue())  # 6
+    print(s.is_empty())  # True
+    print("size:", s.size())  # 0
+    print()
+
+    s = DoubleCycleLinkListQueue()
+    print("DoubleCycleLinkListQueue:")
+    print(s.is_empty())  # True
+    s.enqueue(1)
+    s.enqueue(2)
+    s.enqueue(3)
+    s.enqueue(4)
+    s.enqueue(5)
+    s.enqueue(6)  # 1 2 3 4 5 6
+    print(s.is_empty())  # False
+    print("size:", s.size())  # 6
+    print(s.dequeue())  # 1
+    print(s.dequeue())  # 2
+    print(s.dequeue())  # 3
+    print(s.dequeue())  # 4
+    print(s.dequeue())  # 5
+    print(s.dequeue())  # 6
+    print(s.is_empty())  # True
+    print("size:", s.size())  # 0
+    print()
+
+    # ========= Result ======== #
+    # SingleLinkListQueue       #
+    # True                      #
+    # False                     #
+    # size: 6                   #
+    # 1                         #
+    # 2                         #
+    # 3                         #
+    # 4                         #
+    # 5                         #
+    # 6                         #
+    # True                      #
+    # size: 0                   #
+    #                           #
+    # SingleCycleLinkListQueue  #
+    # True                      #
+    # False                     #
+    # size: 6                   #
+    # 1                         #
+    # 2                         #
+    # 3                         #
+    # 4                         #
+    # 5                         #
+    # 6                         #
+    # True                      #
+    # size: 0                   #
+    #                           #
+    # DoubleLinkListQueue       #
+    # True                      #
+    # False                     #
+    # size: 6                   #
+    # 1                         #
+    # 2                         #
+    # 3                         #
+    # 4                         #
+    # 5                         #
+    # 6                         #
+    # True                      #
+    # size: 0                   #
+    #                           #
+    # DoubleCycleLinkListQueue  #
+    # True                      #
+    # False                     #
+    # size: 6                   #
+    # 1                         #
+    # 2                         #
+    # 3                         #
+    # 4                         #
+    # 5                         #
+    # 6                         #
+    # True                      #
+    # size: 0                   #
+    #                           #
+    # ========================= #
