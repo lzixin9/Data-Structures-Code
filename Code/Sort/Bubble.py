@@ -57,18 +57,76 @@ class BubbleSort(object):
                 cur = cur.next
             # 循环结束，cur指向尾节点
             if count == 0:
-                # 第一次遍历后无交换发生，则已排好序
+                # 第一次for循环后无交换发生，则已排好序
                 return
 
     def bubble_scll(self, scll: SCL.SingleCycleLinkList()):
         """单向循环链表冒泡排序"""
         n = scll.length()
-        for j in range(n-1):
+        if scll.is_empty() or scll.length() == 1:
+            # 若输入链表为空或长度为1，无需排序
+            return
+        for j in range(n - 1):
+            # 次循环，排序完成需要进行n-1次遍历
+            # 计算主循环中交换次数来判断链表是否乱序
             count = 0
             cur = scll.head()
-            if scll.is_empty() or scll.length() == 1:
+
+            while cur.next != scll.head():
+                # 主循环，比较相邻连元素大小
+                if cur.elem > cur.next.elem:
+                    cur.elem, cur.next.elem = cur.next.elem, cur.elem
+                    count += 1
+                # cur指向下一个节点
+                cur = cur.next
+            if count == 0:
+                # 第一次for循环后无交换发生，则已排好序
                 return
-            # while cur.next != scll.head:
+
+    def bubble_dll(self, dll: DLL.DoubleLinkList()):
+        # 几乎和单链表思路代码一样
+        n = dll.length()
+        if dll.is_empty() or dll.length() == 1:
+            # 若输入链表为空或长度为1，无需排序
+            return
+        for j in range(n - 1):
+            # 次循环，排序完成需要进行n-1次遍历
+            # 计算主循环中交换次数来判断链表是否乱序
+            count = 0
+            cur = dll.head()
+            while cur.next is not None:
+                if cur.elem > cur.next.elem:
+                    cur.elem, cur.next.elem = cur.next.elem, cur.elem
+                    count += 1
+                    # cur指向下一个节点
+                cur = cur.next
+            # 循环结束，cur指向尾节点
+            if count == 0:
+                # 第一次for循环后无交换发生，则已排好序
+                return
+
+    def bubble_dcll(self, dcll: DCL.DoubleCycleLinkList()):
+        """单向循环链表冒泡排序"""
+        n = dcll.length()
+        if dcll.is_empty() or dcll.length() == 1:
+            # 若输入链表为空或长度为1，无需排序
+            return
+        for j in range(n - 1):
+            # 次循环，排序完成需要进行n-1次遍历
+            # 计算主循环中交换次数来判断链表是否乱序
+            count = 0
+            cur = dcll.head()
+
+            while cur.next != dcll.head():
+                # 主循环，比较相邻连元素大小
+                if cur.elem > cur.next.elem:
+                    cur.elem, cur.next.elem = cur.next.elem, cur.elem
+                    count += 1
+                # cur指向下一个节点
+                cur = cur.next
+            if count == 0:
+                # 第一次for循环后无交换发生，则已排好序
+                return
 
 
 if __name__ == "__main__":
@@ -91,13 +149,43 @@ if __name__ == "__main__":
     sll.append_list(li)
     bubble.bubble_sll(sll)
     sll.travel()  # 17 20 26 31 44 54 55 77 93
+    print()
+
+    # 单向循环链表冒泡排序测试
+    print("SingleCycleLinkList Bubble:")
+    li = [54, 26, 93, 17, 77, 31, 44, 55, 20]
+    print(li)  # [54, 26, 93, 17, 77, 31, 44, 55, 20]
+    scll = SCL.SingleCycleLinkList()
+    scll.append_list(li)
+    bubble.bubble_scll(scll)
+    scll.travel()  # 17 20 26 31 44 54 55 77 93
+    print()
+
+    # 双向循环链表冒泡排序测试
+    print("DoubleCycleLinkList Bubble:")
+    li = [54, 26, 93, 17, 77, 31, 44, 55, 20]
+    print(li)  # [54, 26, 93, 17, 77, 31, 44, 55, 20]
+    dcll = DCL.DoubleCycleLinkList()
+    dcll.append_list(li)
+    bubble.bubble_dcll(dcll)
+    dcll.travel()  # 17 20 26 31 44 54 55 77 93
+    print()
 
     # =============== Result =============== #
-    # [54, 26, 93, 17, 77, 31, 44, 55, 20]   #
     # List Bubble:                           #
+    # [54, 26, 93, 17, 77, 31, 44, 55, 20]   #
     # [17, 20, 26, 31, 44, 54, 55, 77, 93]   #
+    #                                        #
     # SingleLinkList Bubble:                 #
     # [54, 26, 93, 17, 77, 31, 44, 55, 20]   #
-    # 26 54 17 77 31 44 55 20 93             #
+    # 17 20 26 31 44 54 55 77 93             #
+    #                                        #
+    # SingleCycleLinkList Bubble:            #
+    # [54, 26, 93, 17, 77, 31, 44, 55, 20]   #
+    # 17 20 26 31 44 54 55 77 93             #
+    #                                        #
+    # DoubleLinkList Bubble:                 #
+    # [54, 26, 93, 17, 77, 31, 44, 55, 20]   #
+    # 17 20 26 31 44 54 55 77 93             #
     #                                        #
     # ====================================== #
