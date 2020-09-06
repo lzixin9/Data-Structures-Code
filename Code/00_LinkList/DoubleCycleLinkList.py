@@ -16,6 +16,7 @@ class DoubleCycleLinkList(object):
         self.__head = node
         if node:
             node.next = self.__head
+            node.prev = node
 
     def is_empty(self):
         """链表是否为空"""
@@ -56,6 +57,7 @@ class DoubleCycleLinkList(object):
         if self.is_empty():
             self.__head = node
             node.next = node
+            node.prev = node
         else:
             # 新建游标
             cur = self.__head
@@ -67,6 +69,8 @@ class DoubleCycleLinkList(object):
             # 原来的头节点prev指向node
             node.next.prev = node
             self.__head = node
+            # 头节点prev指向尾节点cur
+            node.prev = cur
             # 尾节点指向头节点
             cur.next = self.__head
 
@@ -77,6 +81,7 @@ class DoubleCycleLinkList(object):
         if self.is_empty():
             self.__head = node
             node.next = node
+            node.prev = node
         else:
             # 新建游标
             cur = self.__head
@@ -88,6 +93,8 @@ class DoubleCycleLinkList(object):
             node.prev = cur
             # 插入
             cur.next = node
+            # 头节点prev指向尾节点node
+            self.__head.prev = node
 
     def insert(self, pos, item):
         """指定位置添加元素
@@ -132,12 +139,10 @@ class DoubleCycleLinkList(object):
                     # 循环结束，rear指向尾节点
                     # 删除
                     self.__head = cur.next
-                    cur.next.prev = None
+                    # 头节点prev指向尾节点rear
+                    cur.next.prev = rear
                     # 尾节点指向头节点
                     rear.next = self.__head
-                # else:  # 因循环中不可能出现一个元素的情况故注释掉
-                #     # 只有一个元素
-                #     self.__head = None
                 else:
                     # 中间节点
                     cur.prev.next = cur.next
@@ -147,8 +152,10 @@ class DoubleCycleLinkList(object):
                 cur = cur.next
         # 循环结束，cur指向尾节点
         if cur.elem == item:
-            if cur.prev is not None:
+            # 链表只有一个元素
+            if self.length() != 1:
                 cur.prev.next = self.__head
+                self.__head.prev = cur.prev
             else:
                 self.__head = None
 
@@ -199,6 +206,8 @@ class DoubleCycleLinkList(object):
                                 cur.next.prev = None
                                 # 尾节点指向头节点
                                 rear.next = self.__head
+                                # 头节点prev指向尾节点rear
+                                cur.next.prev = rear
                                 # cur指向下一个节点
                                 cur = cur.next
                             else:
@@ -211,8 +220,9 @@ class DoubleCycleLinkList(object):
                             cur = cur.next
                     # 循环结束，cur指向尾节点
                     if cur.elem == it:
-                        if cur.prev is not None:
+                        if self.length() != 1:
                             cur.prev.next = self.__head
+                            self.__head.prev = cur.prev
                         else:
                             self.__head = None
         elif isinstance(item, (int, float)):
@@ -236,6 +246,8 @@ class DoubleCycleLinkList(object):
                         cur.next.prev = None
                         # 尾节点指向头节点
                         rear.next = self.__head
+                        # 头节点prev指向尾节点rear
+                        cur.next.prev = rear
                         # cur指向下一个节点
                         cur = cur.next
                     else:
@@ -248,8 +260,9 @@ class DoubleCycleLinkList(object):
                     cur = cur.next
             # 循环结束，cur指向尾节点
             if cur.elem == item:
-                if cur.prev is not None:
+                if self.length() != 1:
                     cur.prev.next = self.__head
+                    self.__head.prev = cur.prev
                 else:
                     self.__head = None
         else:
@@ -268,6 +281,7 @@ class DoubleCycleLinkList(object):
                 if self.is_empty():
                     self.__head = node
                     node.next = node
+                    node.prev = node
                     cur = node  # 游标指向node
                 else:
                     """当第一次找到尾节点后，循环都从尾节点cur开始"""
@@ -281,6 +295,8 @@ class DoubleCycleLinkList(object):
                     # 此时cur指向倒数第二位
                     cur = cur.next
                     # 此时cur指向尾节点
+                    # 头节点prev指向尾节点cur
+                    self.__head.prev = cur
         else:
             return
 
@@ -295,6 +311,7 @@ class DoubleCycleLinkList(object):
                 if self.is_empty():
                     self.__head = node
                     node.next = node
+                    node.prev = node
                 else:
                     """第一次循环遍历到尾节点之后，循环将从尾节点cur开始，减少了for循环遍历所用时间"""
                     # 循环遍历尾节点
@@ -308,6 +325,8 @@ class DoubleCycleLinkList(object):
                     # 尾节点指向头节点
                     cur.next = self.__head
                     # 此时cur指向尾节点
+                    # 头节点prev指向尾节点cur
+                    self.__head.prev = cur
         else:
             # 列表为空
             return
