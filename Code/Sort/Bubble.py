@@ -23,7 +23,7 @@ class BubbleSort(object):
         """列表冒泡排序"""
         n = len(alist)
         for j in range(n - 1):
-            # 次循环，排序完成需要进行n-1次遍历
+            # 次循环，排序完成需要进行n-1次循环
             # 计算主循环中交换次数来判断链表是否乱序
             count = 0
             for i in range(n - 1 - j):
@@ -43,7 +43,7 @@ class BubbleSort(object):
             # 若输入链表为空或长度为1，无需排序
             return
         for j in range(n - 1):
-            # 次循环，排序完成需要进行n-1次遍历
+            # 次循环，排序完成需要进行n-1次循环
             # 计算主循环中交换次数来判断链表是否乱序
             count = 0
             # 游标
@@ -67,7 +67,7 @@ class BubbleSort(object):
             # 若输入链表为空或长度为1，无需排序
             return
         for j in range(n - 1):
-            # 次循环，排序完成需要进行n-1次遍历
+            # 次循环，排序完成需要进行n-1次循环
             # 计算主循环中交换次数来判断链表是否乱序
             count = 0
             cur = scll.head()
@@ -91,7 +91,7 @@ class BubbleSort(object):
             # 若输入链表为空或长度为1，无需排序
             return
         for j in range(n - 1):
-            # 次循环，排序完成需要进行n-1次遍历
+            # 次循环，排序完成需要进行n-1次循环
             # 计算主循环中交换次数来判断链表是否乱序
             count = 0
             cur = dll.head()
@@ -114,7 +114,7 @@ class BubbleSort(object):
             # 若输入链表为空或长度为1，无需排序
             return
         for j in range(n - 1):
-            # 次循环，排序完成需要进行n-1次遍历
+            # 次循环，排序完成需要进行n-1次循环
             # 计算主循环中交换次数来判断链表是否乱序
             count = 0
             cur = dcll.head()
