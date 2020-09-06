@@ -30,6 +30,7 @@
     * Bubble.py
     * Select.py
     * Insert.py
+    * Quick.py
   
 <br>
 
@@ -76,6 +77,7 @@
     * Bubble.py 冒泡排序
     * Select.py 选择排序
     * Insert.py 插入排序
+    * Quick.py 快速排序
       
 
 <br> 
