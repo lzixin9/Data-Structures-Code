@@ -24,25 +24,12 @@
     * DoubleCycleLinkList.py
   * Stack&Queue
     * Stack.py
-      * class: List
-      * class: Single Link List
-      * class: Single Cycle Link List
-      * class: Double Link List
-      * class: Double Cycle Link List
     * Queue.py
-      * class: List
-      * class: Single Link List
-      * class: Single Cycle Link List
-      * class: Double Link List
-      * class: Double Cycle Link List
     * Dequeue.py
-      * class: List
-      * class: Single Link List
-      * class: Single Cycle Link List
-      * class: Double Link List
-      * class: Double Cycle Link List
   * Sort
     * Bubble.py
+    * Select.py
+    * Insert.py
   
 <br>
 
@@ -83,25 +70,12 @@
     * DoubleCycleLinkList.py 双向循环链表
   * Stack&Queue 栈和队列（文件夹） 
     * Stack.py 栈
-      * class: List 列表栈
-      * class: Single Link List 单链表栈
-      * class: Single Cycle Link List 单向循环链表栈
-      * class: Double Link List 双向链表栈
-      * class: Double Cycle Link List 双向循环链表栈
     * Queue.py 队列
-      * class: List 列表队列
-      * class: Single Link List 单链表队列
-      * class: Single Cycle Link List 单向循环链表队列
-      * class: Double Link List 双向链表队列
-      * class: Double Cycle Link List 双向循环链表队列
     * Dequeue.py 双向队列
-      * class: List 列表双向队列
-      * class: Single Link List 单链表双向队列
-      * class: Single Cycle Link List 单向循环链表双向队列
-      * class: Double Link List 双向链表双向队列
-      * class: Double Cycle Link List 双向循环链表双向队列
   * Sort
     * Bubble.py 冒泡排序
+    * Select.py 选择排序
+    * Insert.py 插入排序
       
 
 <br> 
