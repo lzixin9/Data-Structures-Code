@@ -12,10 +12,12 @@ def quick_sort(alist, first, last):
         # high 左移
         while low < high and alist[high] >= mid_value:  # 两个while循环中只能有一个等号
             high -= 1
+        # 因为alist[low]已保存在mid_value中，相当于与中值互换位置
         alist[low] = alist[high]
         # low 右移
         while low < high and alist[low] < mid_value:
             low += 1
+        # 因为alist[high]已保存在mid_value中，相当于与中值互换位置
         alist[high] = alist[low]
     # 从循环退出时，low=high，即找到中值的位置
     alist[low] = mid_value
