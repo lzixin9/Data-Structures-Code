@@ -73,7 +73,7 @@
     * Stack.py 栈
     * Queue.py 队列
     * Dequeue.py 双向队列
-  * Sort
+  * Sort 排序（文件夹）
     * Bubble.py 冒泡排序
     * Select.py 选择排序
     * Insert.py 插入排序
