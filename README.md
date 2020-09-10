@@ -40,15 +40,15 @@
 
 <table>
  
-	<tr>
-	    <th colspan="2">Folder</th>
-	    <th>File.py </th>
-	    <th>Highlight</th>  
-	</tr>
+<tr>
+     <th colspan="2">Folder</th>
+     <th>File.py </th>
+     <th>Highlight</th>  
+</tr>
  
  <tr>
-	    <td rowspan="13"> Code </td>
-	    <td rowspan="4">LinkList</td>
+     <td rowspan="13"> Code </td>
+     <td rowspan="4">LinkList</td>
      <td> SingleLinkList.py </td>
      <td> </td>
  </tr>
