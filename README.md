@@ -36,8 +36,6 @@
   
 <br>
 
-## Highlight
-
 <table>
  
 <tr>
