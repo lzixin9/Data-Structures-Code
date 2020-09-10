@@ -31,6 +31,8 @@
     * Select.py
     * Insert.py
     * Quick.py
+    * Shell.py
+    * Merge.py
   
 <br>
 
@@ -78,7 +80,8 @@
     * Select.py 选择排序
     * Insert.py 插入排序
     * Quick.py 快速排序
-      
+    * Shell.py 希尔排序
+    * Merge.py 归并排序
 
 <br> 
 
