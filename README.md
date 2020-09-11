@@ -41,7 +41,7 @@
 <tr>
      <th colspan="2"> Folder </th>
      <th> Python File </th>
-     <th>Highlight</th>  
+     <th> Highlight </th>  
 </tr>
  
  <tr>
@@ -166,14 +166,14 @@
 <table>
  
 <tr>
-     <th colspan="2">文件夹</th>
-     <th>python 文件 </th>
-     <th>亮点</th>  
+     <th colspan="2"> 文件夹 </th>
+     <th> Python 文件 </th>
+     <th> 亮点 </th>  
 </tr>
  
  <tr>
      <td rowspan="13"> Code </td>
-     <td rowspan="4">LinkList</td>
+     <td rowspan="4"> LinkList </td>
      <td> SingleLinkList.py </td>
      <td> </td>
  </tr>
