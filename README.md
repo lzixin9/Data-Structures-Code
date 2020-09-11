@@ -39,8 +39,8 @@
 <table>
  
 <tr>
-     <th colspan="2">Folder</th>
-     <th>File.py </th>
+     <th colspan="2"> Folder </th>
+     <th> Python File </th>
      <th>Highlight</th>  
 </tr>
  
