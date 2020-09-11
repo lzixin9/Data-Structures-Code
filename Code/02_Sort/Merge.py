@@ -22,13 +22,17 @@ def merge_sort(alist):
     # 将两个有序的子序列合并为一个新的整体
     left_pointer, right_pointer = 0, 0
     result = []
-    # 从left_li和right_li中通过比较挑选元素，若其中一个列表走到末尾则直接跳出循环，将剩下的列表元素直接合并到result列表即可
+    # 从left_li和right_li中通过比较挑选较小元素存在result列表中，若其中一个列表走到末尾则直接跳出循环，将剩下的列表元素直接合并到result列表即可
     while left_pointer < len(left_li) and right_pointer < len(right_li):
         if left_li[left_pointer] <= right_li[right_pointer]:
+            # 指针所指的左边元素较小
             result.append(left_li[left_pointer])
+            # 指针索引往后走
             left_pointer += 1
         else:
+            # 指针所指的右边元素较小
             result.append(right_li[right_pointer])
+            # 指针索引往后走
             right_pointer += 1
 
     result += left_li[left_pointer:]
