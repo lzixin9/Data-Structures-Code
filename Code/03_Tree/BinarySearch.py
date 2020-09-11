@@ -34,17 +34,17 @@ def binary_search_2(alist, item):
 if __name__ == "__main__":
     li = [17, 20, 26, 31, 44, 54, 55, 77, 93]
     print("Binary Search(Recursion):")
-    print("Judge 55 in list:", binary_search(li, 55))
-    print("Judge 100 in list:", binary_search(li, 100))
+    print("Judge if 55 is in list:", binary_search(li, 55))
+    print("Judge if 100 is in list:", binary_search(li, 100))
     print("Binary Search:")
-    print("Judge 55 in list:", binary_search_2(li, 55))
-    print("Judge 100 in list:", binary_search_2(li, 100))
+    print("Judge if 55 is in list:", binary_search_2(li, 55))
+    print("Judge if 100 is in list:", binary_search_2(li, 100))
 
-    # ========= Result ========= #
-    # Binary Search(Recursion):  #
-    # Judge 55 in list: True     #
-    # Judge 100 in list: False   #
-    # Binary Search:             #
-    # Judge 55 in list: True     #
-    # Judge 100 in list: False   #
-    # ========================== #
+    # =========== Result =========== #
+    # Binary Search(Recursion):      #
+    # Judge if 55 is in list: True   #
+    # Judge if 100 is in list: False #
+    # Binary Search:                 #
+    # Judge if 55 is in list: True   #
+    # Judge if 100 is in list: False #
+    # ============================== #
