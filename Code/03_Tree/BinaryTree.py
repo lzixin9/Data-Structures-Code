@@ -1,7 +1,7 @@
 # coding:utf-8
 
 class Node(object):
-    """"""
+    """定义节点"""
 
     def __init__(self, item):
         self.elem = item
@@ -16,7 +16,7 @@ class Tree(object):
         self.root = node
 
     def add(self, item):
-        """加入元素"""
+        """加入节点"""
         node = Node(item)
         if self.root is None:
             self.root = node
